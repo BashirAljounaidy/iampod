@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iampod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: iampod
+  template:
+    metadata:
+      labels:
+        app: iampod
+    spec:
+      containers:
+        - name: iampod-container
+          image: bashiraljounaidy/iampod:latest
