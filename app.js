@@ -1,6 +1,9 @@
 const express = require('express');
 const os = require('os');
 const osUtils = require('os-utils');
+const path = require('path');
+app.use(express.static('public'));
+
 const interfaces = os.networkInterfaces();
 const hostIP = interfaces.eth0[0].address;
 
